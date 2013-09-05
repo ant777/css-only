@@ -1,0 +1,195 @@
+/*
+YUI 3.10.0 (build a03ce0e)
+Copyright 2013 Yahoo! Inc. All rights reserved.
+Licensed under the BSD License.
+http://yuilibrary.com/license/
+*/
+/*
+	TODO will need to remove settings on HTML since we can't namespace it.
+	TODO with the prefix, should I group by selector or property for weight savings?
+*/
+html {
+  color: #18191a;
+  background: #FFF; }
+
+/*
+	TODO remove settings on BODY since we can't namespace it.
+*/
+/*
+	TODO test putting a class on HEAD.
+		- Fails on FF.
+*/
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+input,
+textarea,
+p,
+blockquote,
+th,
+td {
+  margin: 0;
+  padding: 0; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+fieldset,
+img {
+  border: 0; }
+
+/*
+	TODO think about hanlding inheritence differently, maybe letting IE6 fail a bit...
+*/
+address,
+caption,
+cite,
+code,
+dfn,
+em,
+th,
+var {
+  font-style: normal;
+  font-weight: normal; }
+
+ol,
+ul {
+  list-style: none; }
+
+caption,
+th {
+  text-align: left; }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 100%;
+  font-weight: normal; }
+
+q:before,
+q:after {
+  content: ''; }
+
+abbr,
+acronym {
+  border: 0;
+  font-variant: normal; }
+
+/* to preserve line-height and selector appearance */
+sup {
+  vertical-align: text-top; }
+
+sub {
+  vertical-align: text-bottom; }
+
+input,
+textarea,
+select {
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit; }
+
+/*to enable resizing for IE*/
+input,
+textarea,
+select {
+  *font-size: 100%; }
+
+/*because legend doesn't inherit in IE */
+legend {
+  color: #000; }
+
+/* YUI CSS Detection Stamp */
+#yui3-css-stamp.cssreset {
+  display: none; }
+
+/*----- reset -----*/
+/*Border radius*/
+/*Box shadow*/
+/*IE 5+ opacity*/
+/*Transition*/
+/*Transform*/
+/*Box-sizing*/
+/*Background-clip*/
+/* Clearfix */
+/*Transition*/
+html {
+  background: #fafafa; }
+
+.content-wrap {
+  width: 350px;
+  padding-top: 50px;
+  margin: 0 auto; }
+  .content-wrap .unit-collapse {
+    border: 1px solid #666;
+    border-radius: 3px;
+    margin-bottom: 10px; }
+    .content-wrap .unit-collapse label {
+      display: block;
+      height: 40px;
+      line-height: 40px;
+      background: #EFEFEF;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      user-select: none;
+      cursor: pointer;
+      position: relative;
+      padding: 0 10px; }
+      .content-wrap .unit-collapse label:before, .content-wrap .unit-collapse label:after {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 50%;
+        right: 10px;
+        width: 0;
+        height: 0;
+        border-top: 5px solid black;
+        border-left: 5px solid transparent;
+        border-right: 5px solid transparent;
+        border-bottom: none; }
+      .content-wrap .unit-collapse label:after {
+        margin-top: -2px;
+        border-top-color: #EFEFEF; }
+    .content-wrap .unit-collapse .unit-content {
+      max-height: 0;
+      -webkit-transition: 0.2s;
+      -moz-transition: 0.2s;
+      -o-transition: 0.2s;
+      transition: 0.2s;
+      overflow: hidden; }
+      .content-wrap .unit-collapse .unit-content p {
+        padding: 10px; }
+    .content-wrap .unit-collapse input {
+      display: none; }
+      .content-wrap .unit-collapse input:checked ~ div.unit-content {
+        max-height: 399px; }
+      .content-wrap .unit-collapse input:checked + label + div.unit-content {
+        max-height: 399px; }
+      .content-wrap .unit-collapse input:checked + label:before, .content-wrap .unit-collapse input:checked + label:after {
+        border-top: none;
+        border-left: 5px solid transparent;
+        border-right: 5px solid transparent;
+        border-bottom: 5px solid black; }
+      .content-wrap .unit-collapse input:checked + label:after {
+        margin-top: 2px;
+        border-bottom-color: #EFEFEF; }

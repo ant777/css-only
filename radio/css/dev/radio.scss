@@ -1,0 +1,73 @@
+@import '../../../__common-css/reset';
+@import '../../../__common-css/_premix';
+
+html {
+    background: #fafafa;
+}
+
+.content-wrap {
+    width: 350px;
+    padding-top: 50px;
+    margin: 0 auto;
+    .radio-wrap{
+        label{
+            position: relative;
+            display: inline-block;
+            padding-left: 20px;
+            line-height: 15px;
+            &:hover{
+                &:before{
+                    background: #f3f3f3;
+                    box-shadow: 0 0 3px 0 rgba(0,0,0,.2);
+                }
+            }
+            &:after{
+                content: "";
+                display: none;
+                position: absolute;
+                top: 4px;
+                left: 4px;
+                background: #333;
+                width: 7px;
+                height: 7px;
+                border-radius: 50px;
+                cursor: pointer;
+
+            }
+            &:before{
+                content: "";
+                display: block;
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 13px;
+                height: 13px;
+                border: 1px solid #666;
+                border-radius: 100px;
+                background: #f7f7f7;
+                cursor: pointer;
+            }
+        }
+        input[type="radio"]{
+            display: none;
+
+            &:checked{
+                &+label{
+
+                    &:after{
+                        display: block;
+                    }
+                    &:hover{
+                        &:after{
+                            background: #000;
+                        }
+                        &:before{
+                            background: #f3f3f3;
+                            box-shadow: 0 0 3px 0 rgba(0,0,0,.2);
+                        }
+                    }
+                }
+            }
+        }
+    };
+}

@@ -1,0 +1,104 @@
+@import '../../../../__common-css/reset';
+@import '../../../../__common-css/_premix';
+
+html {
+    background: #fafafa;
+}
+
+nav{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #efefef;
+    height: 50px;
+
+    border-bottom: 1px solid #bbb;
+    ul{
+        li{
+            position: relative;
+            float: left;
+            height: 100%;
+            line-height: 50px;
+            width: 20%;
+            text-align: center;
+            ul{
+                @include transition(.5s);
+                position: absolute;
+                top: 100%;
+                left: 0;
+                max-height: 0;
+                width: 100%;
+                overflow: hidden;
+                background: #bbb;
+
+                li{
+                    padding: 5px 10px;
+                    float: none;
+                    width: auto;
+                    text-align: left;
+                    a{
+                        color: #fff;
+                    }
+                    ul{
+                        top: 0;
+                        left: 100%;
+                        background: #111;
+                    }
+                }
+            }
+            input[type="text"]{
+                opacity: 0;
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 0;
+
+                &:focus{
+                    &~ul{
+                        max-height: 400px;
+                        background: #999;
+                    }
+                    &+a{
+                        background: #999;
+                        color: #fff;
+                        &+ul{
+                            max-height: 400px;
+                            background: #999;
+                        }
+                    }
+                    &+input{
+                        //opacity: 1;
+                        //width: 20px;
+                        //height: 20px;
+                        &+a{
+                            background: #999;
+                            color: #fff;
+                            &+ul{
+                                max-height: 400px;
+                                overflow: visible;
+                                    ul{
+                                        max-height: 400px;
+
+                                    }
+                            }
+                        }
+                    }
+                }
+            }
+            a{
+                display: block;
+                text-decoration: none;
+                @include transition(.5s);
+                color: #777;
+                label{
+                    display: block;
+                    padding: 0 10px;
+                    cursor: pointer;
+                }
+            }
+        }
+
+    }
+
+}
