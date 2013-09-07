@@ -1,7 +1,7 @@
-Premix
+NoJS-NoIMG
 ======
 
-Collection of CSS patterns for functionalities usually done with javascript
+Collection of CSS patterns for functionality usually done with javascript
 
 
 Includes:

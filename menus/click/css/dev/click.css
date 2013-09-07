@@ -180,22 +180,22 @@ nav {
       top: 0;
       left: 0;
       width: 0; }
-      nav ul li input[type="text"]:focus ~ ul {
+      nav ul li input[type="text"]:focus ~ ul, nav ul li input[type="text"]:active ~ ul {
         max-height: 400px;
         background: #999; }
-      nav ul li input[type="text"]:focus + a {
+      nav ul li input[type="text"]:focus + a, nav ul li input[type="text"]:active + a {
         background: #999;
         color: #fff; }
-        nav ul li input[type="text"]:focus + a + ul {
+        nav ul li input[type="text"]:focus + a + ul, nav ul li input[type="text"]:active + a + ul {
           max-height: 400px;
           background: #999; }
-      nav ul li input[type="text"]:focus + input + a {
+      nav ul li input[type="text"]:focus + input + a, nav ul li input[type="text"]:active + input + a {
         background: #999;
         color: #fff; }
-        nav ul li input[type="text"]:focus + input + a + ul {
+        nav ul li input[type="text"]:focus + input + a + ul, nav ul li input[type="text"]:active + input + a + ul {
           max-height: 400px;
           overflow: visible; }
-          nav ul li input[type="text"]:focus + input + a + ul ul {
+          nav ul li input[type="text"]:focus + input + a + ul ul, nav ul li input[type="text"]:active + input + a + ul ul {
             max-height: 400px; }
     nav ul li a {
       display: block;

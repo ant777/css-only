@@ -136,35 +136,64 @@ legend {
 html {
   background: #fafafa; }
 
-.content-wrap {
-  width: 350px;
-  padding-top: 50px;
-  margin: 0 auto; }
-  .content-wrap .checkbox-wrap label {
+nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #efefef;
+  height: 50px;
+  border-bottom: 1px solid #bbb; }
+  nav ul li {
     position: relative;
-    display: inline-block;
-    padding-left: 20px;
-    line-height: 15px; }
-    .content-wrap .checkbox-wrap label:after {
-      content: "";
-      display: none;
+    float: left;
+    height: 100%;
+    line-height: 50px;
+    width: 20%;
+    text-align: center; }
+    nav ul li ul {
+      -webkit-transition: 0.5s;
+      -moz-transition: 0.5s;
+      -o-transition: 0.5s;
+      transition: 0.5s;
       position: absolute;
-      top: 4px;
-      left: 4px;
-      background: #333;
-      width: 7px;
-      height: 7px;
-      border-radius: 50px; }
-    .content-wrap .checkbox-wrap label:before {
-      content: "";
-      display: block;
-      position: absolute;
-      top: 0;
+      top: 100%;
       left: 0;
-      width: 13px;
-      height: 13px;
-      border: 1px solid #666;
-      border-radius: 100px;
-      background: #f7f7f7; }
-  .content-wrap .checkbox-wrap input[type="checkbox"]:checked label:after {
-    display: block; }
+      max-height: 0;
+      width: 100%;
+      overflow: hidden;
+      background: #bbb; }
+      nav ul li ul li {
+        padding: 5px 10px;
+        float: none;
+        width: auto;
+        text-align: left; }
+        nav ul li ul li a {
+          color: #fff; }
+        nav ul li ul li ul {
+          top: 0;
+          left: 100%;
+          max-height: 0;
+          background: #111; }
+    nav ul li:hover > ul {
+      max-height: 400px !important;
+      background: #999;
+      overflow: visible; }
+    nav ul li:hover a {
+      background: #999;
+      color: #fff; }
+      nav ul li:hover a + ul {
+        max-height: 400px;
+        background: #999; }
+    nav ul li a {
+      display: block;
+      text-decoration: none;
+      -webkit-transition: 0.5s;
+      -moz-transition: 0.5s;
+      -o-transition: 0.5s;
+      transition: 0.5s;
+      color: #777; }
+      nav ul li a label {
+        display: block;
+        padding: 0 10px;
+        cursor: pointer; }
