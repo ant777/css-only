@@ -1,0 +1,69 @@
+@import '../../../__common-css/reset';
+@import '../../../__common-css/_premix';
+
+html {
+    background: #fafafa;
+}
+
+
+.content-wrap {
+    width: 350px;
+    padding-top: 70px;
+
+    margin: 0 auto;
+    .tooltip{
+        position: relative;
+        //overflow: hidden;
+        display: inline-block;
+        &:before{
+            content: "";
+            display: block;
+            opacity: 0;
+            position: absolute;
+            bottom: 100%;
+            left: 50%;
+            margin-left: -3px;
+            border:{
+                top: 5px solid #333;
+                right: 5px solid transparent;
+                left: 5px solid  transparent;
+            }
+            @include transition(1s opacity);
+        }
+        &:after{
+            content: attr(title);
+            position: absolute;
+            border: 3px solid #333;
+            left: 50%;
+            opacity: 0;
+            width: 0;
+            margin: 0 0 4px -100px;
+            bottom: 100%;
+            max-height: 0px;
+            background: #eee;
+            border-radius: 4px;
+            display: block;
+            @include transition(1s);
+            padding: 5px;
+            text-align: center;
+            font:{
+                size: 13px;
+                style: italic;
+
+            }
+            color: #666;
+        }
+        &:hover{
+            text-decoration: none;
+            &:after,
+            &:before{
+                max-height: 80px;
+                opacity: 1;
+            }
+            &:after{
+                width: 200px;
+            }
+
+        }
+    }
+}

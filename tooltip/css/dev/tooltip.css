@@ -1,0 +1,189 @@
+/*
+YUI 3.10.0 (build a03ce0e)
+Copyright 2013 Yahoo! Inc. All rights reserved.
+Licensed under the BSD License.
+http://yuilibrary.com/license/
+*/
+/*
+	TODO will need to remove settings on HTML since we can't namespace it.
+	TODO with the prefix, should I group by selector or property for weight savings?
+*/
+html {
+  color: #18191a;
+  background: #FFF; }
+
+/*
+	TODO remove settings on BODY since we can't namespace it.
+*/
+/*
+	TODO test putting a class on HEAD.
+		- Fails on FF.
+*/
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+input,
+textarea,
+p,
+blockquote,
+th,
+td {
+  margin: 0;
+  padding: 0; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+fieldset,
+img {
+  border: 0; }
+
+/*
+	TODO think about hanlding inheritence differently, maybe letting IE6 fail a bit...
+*/
+address,
+caption,
+cite,
+code,
+dfn,
+em,
+th,
+var {
+  font-style: normal;
+  font-weight: normal; }
+
+ol,
+ul {
+  list-style: none; }
+
+caption,
+th {
+  text-align: left; }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 100%;
+  font-weight: normal; }
+
+q:before,
+q:after {
+  content: ''; }
+
+abbr,
+acronym {
+  border: 0;
+  font-variant: normal; }
+
+/* to preserve line-height and selector appearance */
+sup {
+  vertical-align: text-top; }
+
+sub {
+  vertical-align: text-bottom; }
+
+input,
+textarea,
+select {
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit; }
+
+/*to enable resizing for IE*/
+input,
+textarea,
+select {
+  *font-size: 100%; }
+
+/*because legend doesn't inherit in IE */
+legend {
+  color: #000; }
+
+/* YUI CSS Detection Stamp */
+#yui3-css-stamp.cssreset {
+  display: none; }
+
+/*----- reset -----*/
+/*Border radius*/
+/*Box shadow*/
+/*IE 5+ opacity*/
+/*Transition*/
+/*Transform*/
+/*Box-sizing*/
+/*Background-clip*/
+/* Clearfix */
+/*Transition*/
+html {
+  background: #fafafa; }
+
+.content-wrap {
+  width: 350px;
+  padding-top: 70px;
+  margin: 0 auto; }
+  .content-wrap .tooltip {
+    position: relative;
+    display: inline-block; }
+    .content-wrap .tooltip:before {
+      content: "";
+      display: block;
+      opacity: 0;
+      position: absolute;
+      bottom: 100%;
+      left: 50%;
+      margin-left: -3px;
+      border-top: 5px solid #333;
+      border-right: 5px solid transparent;
+      border-left: 5px solid  transparent;
+      -webkit-transition: 1s opacity;
+      -moz-transition: 1s opacity;
+      -o-transition: 1s opacity;
+      transition: 1s opacity; }
+    .content-wrap .tooltip:after {
+      content: attr(title);
+      position: absolute;
+      border: 3px solid #333;
+      left: 50%;
+      opacity: 0;
+      width: 0;
+      margin: 0 0 4px -100px;
+      bottom: 100%;
+      max-height: 0px;
+      background: #eee;
+      border-radius: 4px;
+      display: block;
+      -webkit-transition: 1s;
+      -moz-transition: 1s;
+      -o-transition: 1s;
+      transition: 1s;
+      padding: 5px;
+      text-align: center;
+      font-size: 13px;
+      font-style: italic;
+      color: #666; }
+    .content-wrap .tooltip:hover {
+      text-decoration: none; }
+      .content-wrap .tooltip:hover:after, .content-wrap .tooltip:hover:before {
+        max-height: 80px;
+        opacity: 1; }
+      .content-wrap .tooltip:hover:after {
+        width: 200px; }
