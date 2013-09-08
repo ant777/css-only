@@ -1,0 +1,167 @@
+@import '../../../__common-css/reset';
+@import '../../../__common-css/_premix';
+
+html {
+    background: #fafafa;
+}
+
+.content-wrap {
+
+    width: 960px;
+    padding-top: 50px;
+    margin: 0 auto;
+    .slider-wrap{
+        width: 100%;
+        height: 200px;
+        overflow: hidden;
+        border: 1px solid #333;
+        position: relative;
+        input{
+            position: absolute;
+            opacity: .1;
+        }
+
+        .slider-contents{
+            @include transition(1s);
+            width: 400%;
+            overflow: hidden;
+            height: 100%;
+            .slide{
+                width: 25%;
+                float: left;
+                height: 100%;
+                text-align: center;
+                line-height: 200px;
+                &:nth-child( even ){
+                    background: #999;
+                }
+            }
+        }
+        .slider-nav{
+            position: absolute;
+            bottom: 5px;
+
+            left: 10px;
+            li{
+                display: inline-block;
+            }
+            label{
+                display: block;
+                width: 10px;
+                height: 10px;
+                border: 1px solid #333;
+                border-radius: 20px;
+                cursor: pointer;
+            }
+
+        }
+        .larr,
+        .rarr{
+            position: absolute;
+            top: 50%;
+            left: 5px;
+            width: 10px;
+            height: 20px;
+            overflow: hidden;
+            margin-top: -10px;
+            .labels{
+
+
+            }
+            label{
+                display: block;
+                cursor: pointer;
+                border:{
+                    top: 10px solid transparent;
+                    bottom: 10px solid transparent;
+                    right: 10px solid #333;
+                }
+            }
+        }
+        .rarr{
+            left: auto;
+            right: 5px;
+            label{
+                display: block;
+                border:{
+                    left: 10px solid #333;
+                    right: none;
+                }
+            }
+        }
+        #slide1:checked{
+            &~.slider-contents{
+                margin-left: 0 ;
+            }
+            &~.slider-nav label[for="slide1"]{
+                background: #333;
+            }
+            &~.larr{
+                .labels{
+                    margin-top: 20px;
+                }
+            }
+            &~.rarr{
+                .labels{
+                    margin-top: -40px;
+                }
+            }
+        }
+        #slide2:checked{
+            &~.slider-contents{
+                margin-left: -100% ;
+            }
+            &~.slider-nav label[for="slide2"]{
+                background: #333;
+            }
+            &~.larr{
+                .labels{
+                    margin-top: 0;
+                }
+            }
+            &~.rarr{
+                .labels{
+                    margin-top: -20px;
+                }
+            }
+        }
+        #slide3:checked{
+            &~.slider-contents{
+                margin-left: -200% ;
+            }
+            &~.slider-nav label[for="slide3"]{
+                background: #333;
+            }
+            &~.larr{
+                .labels{
+                    margin-top: -20px;
+                }
+            }
+            &~.rarr{
+                .labels{
+                    margin-top: 0;
+                }
+            }
+        }
+        #slide4:checked{
+            &~.slider-contents{
+
+                margin-left: -300% ;
+            }
+            &~.slider-nav label[for="slide4"]{
+                background: #333;
+            }
+            &~.larr{
+                .labels{
+                    margin-top: -40px;
+                }
+            }
+            &~.rarr{
+                .labels{
+                    margin-top: 20px;
+
+                }
+            }
+        }
+    }
+}
