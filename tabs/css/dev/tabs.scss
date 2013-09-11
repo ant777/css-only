@@ -1,0 +1,55 @@
+@import '../../../__common-css/reset';
+@import '../../../__common-css/_premix';
+
+html {
+    background: #fafafa;
+}
+
+.content-wrap {
+
+    width: 960px;
+    padding-top: 50px;
+    margin: 0 auto;
+    .tabs-wrap{
+        width: 100%;
+        height: 200px;
+        position: relative;
+        input{
+            position: absolute;
+            opacity: .1;
+            display: none;
+        }
+
+        .tab-contents{
+            @include transition(1s);
+            display: none;
+            padding: 20px;
+            border: 1px solid #333;
+        }
+        input:checked+.tab-contents{
+            display: block;
+        }
+        .tabs-nav{
+            position: relative;
+            overflow: hidden;
+            li{
+                float: left;
+                height: 40px;
+                line-height: 40px;
+
+            }
+            label{
+
+                display: block;
+                cursor: pointer;
+                width: 150px;
+                border: 1px solid #333;
+                border-radius: 3px;
+                text-align: center;
+                background: #eee;
+            }
+
+        }
+    }
+}
+

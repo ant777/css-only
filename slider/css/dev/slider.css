@@ -148,7 +148,8 @@ html {
     position: relative; }
     .content-wrap .slider-wrap input {
       position: absolute;
-      opacity: .1; }
+      opacity: .1;
+      display: none; }
     .content-wrap .slider-wrap .slider-contents {
       -webkit-transition: 1s;
       -moz-transition: 1s;

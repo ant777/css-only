@@ -6,9 +6,11 @@ Collection of CSS patterns for functionality usually done with javascript
 
 Includes:
 
-- Custom radio buttons
-- Custom checkboxes
-- CSS-only accordion widget (similar to jquery ui analog but without javascript)
+- CSS-only Custom radio buttons
+- CSS-only Custom checkboxes
+- CSS-only accordion widget
 - CSS-only expandable blocks
-- CSS-driven page navigation
-- CSS slider
+- CSS-only page navigation
+- CSS-only slider
+- CSS-only tooltip
+- CSS-only tabs
