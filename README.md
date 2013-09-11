@@ -1,4 +1,4 @@
-NoJS-NoIMG
+CSS-only
 ======
 
 Collection of CSS patterns for functionality usually done with javascript
